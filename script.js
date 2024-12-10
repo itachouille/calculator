@@ -1,5 +1,6 @@
 const screen = document.getElementById("screen");
 const resetButton = document.getElementById("reset-btn");
+const loveButton = document.getElementById("love-btn");
 const numberButtons = document.querySelectorAll(".number-btn");
 const signButtons = document.querySelectorAll(".sign-btn");
 
@@ -75,3 +76,7 @@ function calculate() {
   previousNumber = "";
   operator = null;
 }
+
+loveButton.addEventListener("click", () => {
+  screen.innerHTML = `<span>Made with ❤️ by Anthony</span>`;
+});

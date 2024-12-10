@@ -12,7 +12,7 @@ html {
 
 body {
   display: flex;
-  height: 100%;
+  height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -27,7 +27,9 @@ body {
 }
 
 #screen {
+  position: relative;
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: flex-end;
   font-size: xx-large;
@@ -37,6 +39,7 @@ body {
   padding: 0.5rem;
   margin-bottom: 0.5rem;
   border-radius: 15px;
+  overflow-x: hidden;
 }
 
 button {
@@ -56,4 +59,19 @@ button {
 
 .sign-btn {
   background-color: orange;
+}
+
+#screen span {
+  position: absolute;
+  white-space: nowrap;
+  animation: test 10s infinite linear;
+}
+
+@keyframes test {
+  0% {
+    transform: translateX(340px);
+  }
+  100% {
+    transform: translateX(-200px);
+  }
 }
