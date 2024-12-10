@@ -78,5 +78,8 @@ function calculate() {
 }
 
 loveButton.addEventListener("click", () => {
-  screen.innerHTML = `<span>Made with ❤️ by Anthony</span>`;
+  screen.innerHTML = `<span class="easter-egg">Made with ❤️ by Anthony</span>`;
+  setTimeout(() => {
+    screen.innerHTML = "";
+  }, 11000);
 });

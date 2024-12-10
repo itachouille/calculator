@@ -61,13 +61,16 @@ button {
   background-color: orange;
 }
 
-#screen span {
+.easter-egg {
   position: absolute;
   white-space: nowrap;
-  animation: test 10s infinite linear;
+  animation: love 10s infinite linear;
+  color: pink;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px red;
 }
 
-@keyframes test {
+@keyframes love {
   0% {
     transform: translateX(340px);
   }
