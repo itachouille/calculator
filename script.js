@@ -1,5 +1,7 @@
 const screen = document.getElementById("screen");
 const resetButton = document.getElementById("reset-btn");
+const pointButton = document.getElementById("point-btn");
+const changeButton = document.getElementById("change-btn");
 const loveButton = document.getElementById("love-btn");
 const numberButtons = document.querySelectorAll(".number-btn");
 const signButtons = document.querySelectorAll(".sign-btn");
@@ -26,6 +28,16 @@ numberButtons.forEach((button) => {
     updateScreen(currentNumber);
   });
 });
+
+pointButton.addEventListener("click", () => {
+  if (currentNumber === "0") currentNumber = "0.";
+  currentNumber += ".";
+  updateScreen(currentNumber);
+});
+
+/* changeButton.addEventListener("click", () => {
+
+}); */
 
 signButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -70,7 +82,6 @@ function calculate() {
       result = num1 % num2;
       break;
   }
-
   updateScreen(result);
   currentNumber = result.toString();
   previousNumber = "";
@@ -79,7 +90,4 @@ function calculate() {
 
 loveButton.addEventListener("click", () => {
   screen.innerHTML = `<span class="easter-egg">Made with ❤️ by Anthony</span>`;
-  setTimeout(() => {
-    screen.innerHTML = "";
-  }, 11000);
 });
